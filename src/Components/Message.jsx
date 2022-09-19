@@ -15,8 +15,7 @@ const Message = ({message}) => {
     ref.current?.scrollIntoView({ behaviour:"smooth" })
   }, [])
 
-
-  console.log(new Date(message.date.seconds * 1000).getMinutes())
+  
   return (
     <div ref={ref} className={`message ${message.senderId === currentUser.uid && 'owner' }`}>
       <div className="messageInfo">
